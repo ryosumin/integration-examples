@@ -10,7 +10,7 @@ public class LaunchActivity extends SkillzActivity {
     public void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
 
-        setContentView(R.layout.skillz_activity);
+        // setContentView(R.layout.skillz_activity);
         Skillz.launch(this);
     }
 }
