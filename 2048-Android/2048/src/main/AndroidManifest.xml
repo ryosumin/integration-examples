@@ -3,13 +3,13 @@
     package="com.tpcstld.twozerogame">
 
     <application
-        android:extractNativeLibs="false"
+        android:extractNativeLibs="true"
         android:allowBackup="true"
         android:icon="@drawable/logo_2048"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <meta-data android:name="skillz_game_id" android:value="23617" />
+        <meta-data android:name="skillz_game_id" android:value="88819" />
         <meta-data android:name="skillz_production" android:value="false" />
         <meta-data android:name="skillz_game_activity" android:value="com.tpcstld.twozerogame.MainActivity" />
         <meta-data android:name="skillz_allow_exit" android:value="false" />

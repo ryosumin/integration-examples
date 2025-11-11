@@ -27,9 +27,16 @@ android {
     }
 
     buildTypes {
+        debug {
+            jniDebuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-user.txt'
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -64,5 +71,5 @@ android {
 
 dependencies {
     implementation 'com.android.support:multidex:2.0.0'
-    implementation 'com.skillz.sdk:skillz-sdk-android:2024.1.24'
+    implementation 'com.skillz.sdk:skillz-sdk-android:2025.0.50'
 }
