@@ -1,7 +1,13 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 android {
-    compileSdkVersion 34
+    compileSdkVersion 35
     namespace 'com.tpcstld.twozerogame'
 
     defaultConfig {
@@ -70,6 +76,21 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:multidex:2.0.0'
-    implementation 'com.skillz.sdk:skillz-sdk-android:2025.0.50'
+    //implementation 'com.android.support:multidex:2.0.0'
+    implementation (name:'library-0.19.0', ext:'aar')
+    implementation (name:'lottie-2.5.6', ext:'aar')
+    implementation (name:'lottie-react-native-skillz-2.6.2', ext:'aar')
+    implementation (name:'picasso-2.71828', ext:'aar')
+    implementation (name:'SwipeRevealLayout-1.4.0', ext:'aar')
+    implementation (name:'tracker-3.11.0', ext:'aar')
+    implementation ('com.google.android.gms:play-services-ads:24.8.0')
+    implementation ('com.skillz.sdk:skillz-sdk-android:2025.0.50'){
+      exclude group: "com.airbnb.android", module: "lottie-react-native-skillz"
+      exclude group: "com.airbnb.android", module: "lottie"
+      exclude group: "com.github.tiagohm.MarkdownView", module: "library"
+      exclude group: "com.squareup.picasso", module: "picasso"
+      exclude group: "com.github.chthai64", module: "SwipeRevealLayout"
+      exclude group: "com.kochava.base", module: "tracker"
+      exclude group: "com.google.android.gms", module: "play-services-ads"
+    }
 }
