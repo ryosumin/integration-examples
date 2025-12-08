@@ -5,7 +5,7 @@ android {
     namespace 'com.tpcstld.twozerogame'
 
     defaultConfig {
-        minSdkVersion 26
+        minSdkVersion 24
         targetSdkVersion 34
         versionCode 28
         versionName "1.1.11"
